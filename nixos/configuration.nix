@@ -8,11 +8,14 @@
   ];
 
   services.cron = {
-    enable = true;
+    enable = false;
     systemCronJobs = [
       # "*/30 * * * *      root    ${ihpApp}/bin/SomeScript"
     ];
   };
+
+  nix.settings.substituters = [ "https://digitallyinduced.cachix.org" ];
+  nix.settings.trusted-public-keys = [ "digitallyinduced.cachix.org-1:y+wQvrnxQ+PdEsCt91rmvv39qRCYzEgGQaldK26hCKE=" ];
 
   security.acme.defaults.email = "youremail@email.com";
   security.acme.acceptTerms = true;
