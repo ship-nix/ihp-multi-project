@@ -7,7 +7,7 @@ let
 in
 {
   services.nginx.virtualHosts = {
-    "ihp-private-1.com" = {
+    "ihp-private-2.com" = {
       serverName = "ihp-private-2.com";
       default = false;
       enableACME = isHttpEnabled;
