@@ -3,9 +3,11 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-22.11";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+    ihp-app-one.url = "github:kodeFant/ihp-private-one";
+    ihp-app-two.url = "github:kodeFant/ihp-private-two";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable } @attrs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, ihp-app-one, ihp-app-two } @attrs:
     let
       system = "x86_64-linux";
       overlay-unstable = final: prev: {
@@ -22,6 +24,8 @@
         inherit system;
         specialArgs = attrs // {
           environment = "production";
+          ihp-app-one = ihp-app-one;
+          ihp-app-two = ihp-app-two;
         };
         modules = [
           # Overlays-module makes "pkgs.unstable" available in configuration.nix
@@ -31,4 +35,3 @@
       };
     };
 }
-    
