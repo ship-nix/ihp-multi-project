@@ -1,5 +1,60 @@
 {
   "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1676283394,
+        "narHash": "sha256-XX2f9c3iySLCw54rJ/CZs+ZK6IQy7GXNY4nSOyu2QG4=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3db36a8b464d0c4532ba1c7dda728f4576d6d073",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "ihp-app-one": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1676906073,
+        "narHash": "sha256-vc3rIL107GZ+zppP4lEGqew1N7tQqCksGstboRx9Sm0=",
+        "ref": "main",
+        "rev": "4d49a5db5a52e1597687232cd637c8824ecc7ad3",
+        "revCount": 2,
+        "type": "git",
+        "url": "ssh://git@github.com/kodeFant/ihp-private-one.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/kodeFant/ihp-private-one.git"
+      }
+    },
+    "ihp-app-two": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2",
+        "nixpkgs-unstable": "nixpkgs-unstable"
+      },
+      "locked": {
+        "lastModified": 1676899328,
+        "narHash": "sha256-KZWTWILMAaOV92Wv4vosbhIhnFqM0WZRxJ+DHMfEpms=",
+        "ref": "main",
+        "rev": "7a127d9f5496c81f411e65366c2d2baae63ed0ec",
+        "revCount": 1,
+        "type": "git",
+        "url": "ssh://git@github.com/kodeFant/ihp-private-two.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/kodeFant/ihp-private-two.git"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1676817468,
@@ -30,10 +85,57 @@
         "type": "indirect"
       }
     },
+    "nixpkgs-unstable_2": {
+      "locked": {
+        "lastModified": 1676721149,
+        "narHash": "sha256-mN2EpTGxxVNnFZLoLWRwh6f7UWhXy4qE+wO2CZyrXps=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5f4e07deb7c44f27d498f8df9c5f34750acf52d2",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1676817468,
+        "narHash": "sha256-ovuJ1jQOC2/EEibufBkXmSN/O9mLx80Wh7aDmHmHAhA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0cf4274b5d06325bd16dbf879a30981bc283e58a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-22.11",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1676817468,
+        "narHash": "sha256-ovuJ1jQOC2/EEibufBkXmSN/O9mLx80Wh7aDmHmHAhA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0cf4274b5d06325bd16dbf879a30981bc283e58a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-22.11",
+        "type": "indirect"
+      }
+    },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "ihp-app-one": "ihp-app-one",
+        "ihp-app-two": "ihp-app-two",
+        "nixpkgs": "nixpkgs_3",
+        "nixpkgs-unstable": "nixpkgs-unstable_2"
       }
     }
   },

@@ -9,7 +9,7 @@ in
   services.nginx.virtualHosts = {
     "ihp-private-1.com" = {
       serverName = "ihp-private-2.com";
-      default = true;
+      default = false;
       enableACME = isHttpEnabled;
       serverAliases = [ "www.ihp-private-2.com" ];
       forceSSL = isHttpEnabled;
