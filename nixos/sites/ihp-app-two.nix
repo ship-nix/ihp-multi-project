@@ -37,6 +37,9 @@ in
     wantedBy = [
       "multi-user.target"
     ];
+    environment = {
+      PORT = "8002";
+    };
     serviceConfig = {
       Type = "simple";
       User = "ship";
@@ -54,10 +57,14 @@ in
     wantedBy = [
       "multi-user.target"
     ];
+    environment = {
+      PORT = "8002";
+    };
     serviceConfig = {
       Type = "simple";
       User = "ship";
       Restart = "always";
+
       WorkingDirectory = "${ihp-app-two}/lib";
       EnvironmentFile = /etc/shipnix/multi-env/ihp-private-one;
       ExecStart = '' ${ihp-app-two}/bin/RunJobs '';
