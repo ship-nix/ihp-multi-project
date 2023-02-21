@@ -2,8 +2,8 @@
 let
   # TODO: Enable SSL
   # By enabling SSL, you accept the terms and conditions of LetsEncrypt
-  isHttpEnabled = true;
-  jobsEnabled = true;
+  isHttpEnabled = false;
+  jobsEnabled = false;
 in
 {
   services.nginx.virtualHosts = {
